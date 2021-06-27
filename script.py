@@ -1,27 +1,12 @@
-# Hangman
-
-**Premise**
-For this project, you'll create a hangman game. The script needs to randomly select a word from an imported dictionary of English words, and provide the player a means of guessing the letters in the selected word
-ignore case and words that do not contain all alphabets, count the frequencies, and ignore uninteresting or irrelevant 
-
-**Language**
-Python
-
-### Below is a demonstration of the hangman script
-![Hangman](./hangman.gif)
----
----
-### Below are the installs and imports needed for the hangman script
-
-```
+# Importing required libraries and files
 import random
 import string
 
-from word_list import words # dictionary of English words
-```
+from word_list import words
 
-### Code which allows the computer to select a **random** word from the imported word list (word_list)
-```
+# Code which allows the computer to select a **random** word 
+# from the imported word list (word_list)
+
 def get_valid_word(word_list):
     # The code will randomly select a word from the imported word list
     word = random.choice(words) 
@@ -35,10 +20,7 @@ def get_valid_word(word_list):
    
 
     return word.upper()
-```
 
-### Code for the hangman game
-```
 def hangman_game():
     # Invoking function to select the game word
     word = get_valid_word(words)
@@ -100,6 +82,3 @@ def hangman_game():
         print("Yeah You Won. You guessed {}".format(word))
 
 hangman_game()
-```
-   
-
